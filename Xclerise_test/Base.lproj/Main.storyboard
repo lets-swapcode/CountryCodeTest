@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Xclerise_test" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="kSL-u1-NeQ">
+                                <rect key="frame" x="0.0" y="113" width="393" height="739"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="country" rowHeight="80" id="nNe-VJ-8A0" customClass="countryCell" customModule="Xclerise_test" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="393" height="80"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="nNe-VJ-8A0" id="3OH-FO-4OE">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="80"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PJ2-Ux-71s">
+                                                    <rect key="frame" x="25" y="21" width="338" height="38"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tQr-KE-FiX">
+                                                    <rect key="frame" x="25" y="63" width="358" height="17"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="PJ2-Ux-71s" firstAttribute="leading" secondItem="3OH-FO-4OE" secondAttribute="leadingMargin" constant="5" id="Vvh-Oe-HOM"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="PJ2-Ux-71s" secondAttribute="trailing" constant="10" id="c2b-r3-hRe"/>
+                                                <constraint firstItem="PJ2-Ux-71s" firstAttribute="top" secondItem="3OH-FO-4OE" secondAttribute="topMargin" constant="10" id="etU-Si-OdG"/>
+                                                <constraint firstAttribute="trailing" secondItem="tQr-KE-FiX" secondAttribute="trailing" constant="10" id="ljy-KA-77H"/>
+                                                <constraint firstItem="PJ2-Ux-71s" firstAttribute="centerY" secondItem="3OH-FO-4OE" secondAttribute="centerY" id="mu0-sp-s0t"/>
+                                                <constraint firstItem="tQr-KE-FiX" firstAttribute="leading" secondItem="PJ2-Ux-71s" secondAttribute="leading" id="pUL-6z-L1X"/>
+                                                <constraint firstItem="tQr-KE-FiX" firstAttribute="top" secondItem="PJ2-Ux-71s" secondAttribute="bottom" constant="4" id="whW-a6-dhg"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="lblCountryCurrency" destination="tQr-KE-FiX" id="yuK-R3-giU"/>
+                                            <outlet property="lblCountryName" destination="PJ2-Ux-71s" id="LiQ-Be-4t7"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="Vqu-LG-YYY"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="vIM-hu-qUB"/>
+                                </connections>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bbh-nk-2kf">
+                                <rect key="frame" x="133.66666666666666" y="69" width="125.66666666666666" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="K5o-4s-keB"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="Get Currency"/>
+                                <connections>
+                                    <action selector="btnGetCountryAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Rsv-61-mL5"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="kSL-u1-NeQ" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="2tg-RH-HyV"/>
+                            <constraint firstItem="kSL-u1-NeQ" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" constant="44" id="9DA-aL-LWd"/>
+                            <constraint firstItem="Bbh-nk-2kf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="GLD-mz-QvW"/>
+                            <constraint firstItem="kSL-u1-NeQ" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" constant="-113" id="NH1-Bh-4lj"/>
+                            <constraint firstItem="kSL-u1-NeQ" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="Pc4-7w-KSm"/>
+                            <constraint firstItem="Bbh-nk-2kf" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="ZaC-rz-mCn"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="btnCurrency" destination="Bbh-nk-2kf" id="UA6-j6-eju"/>
+                        <outlet property="tableCountry" destination="kSL-u1-NeQ" id="0xZ-f9-Nuq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-60.305343511450381" y="7.746478873239437"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
